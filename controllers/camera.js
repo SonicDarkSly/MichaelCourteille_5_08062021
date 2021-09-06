@@ -3,7 +3,7 @@ const Camera = require('../models/Camera');
 
 exports.getAllCameras = (req, res, next) => {
   Camera.find().then(
-    (cameras) => {
+    (cameras) => { 
       const mappedCameras = cameras.map((camera) => {
         camera.imageUrl = req.protocol + '://' + req.get('host') + '/images/' + camera.imageUrl;
         return camera;
