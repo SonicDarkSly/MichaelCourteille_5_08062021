@@ -1,37 +1,27 @@
-let container = document.getElementById("container");
+let container = document.getElementById("containerListe");
 
-//  FONCTION AFFICHAGE HTML
-const display = camera => {
-    container.innerHTML += `
-    <article id="cardsProduct" class="produit">
-        <img src=${camera.imageUrl} alt="photos produits" />
-        <div class="bloqueDescription">
-            <h2> ${camera.name}</h2>
-            <p>${camera.price / 100}€</p>
-        </div>
-        <p>${camera.description}</p>
-        <a href="pages/produit.html?id=${camera.id}"> En savoir plus</a>
-    </article>`
-};
 
 //APPEL API AVEC FETCH
 fetch("http://127.0.0.1:3000/api/cameras")
     .then(response => response.json())  
-    .then(function (listeProduct) {
-        console.log(listeProduct)
-        // boucle for prend un produit de la liste 
-        for (let product of listeProduct) {
-            let camera = new Camera(product)
-            display(camera);
-        }
-    })
+    .then(response => lecture(response))
+    //.then(response2 => console.table(response2))
     //SI PROBLEME API
     .catch(function (err) {
         console.log("fetch Error")
-        alert("Veuillez nous exuser les produits ne sont pas disponible pour le moment ")
     });
 
 
-
-        
-    
+function lecture(info) {
+    for (i = 0; i <= info.length; i++) { 
+       container.innerHTML += `
+       <article id='${info[i]._id}' class='bg-light text-center'>
+         <img src='${info[i].imageUrl}' class='img-fluid photoListe' alt='photo ${info[i].name}' />
+         <div>
+           <h2>${info[i].name}</h2>
+           <p>${info[i].price/100}.00 €</p>
+         </div>
+         <p><a href='pages/produit.html?id=${info[i]._id}'> En savoir plus</a></p>
+       </article>`
+      }
+}

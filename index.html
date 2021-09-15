@@ -4,54 +4,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Orinoco spécialiste en appareils photos professionels et de collection" />
+  <meta name="description" content="OriView, branche de l'entreprise Orinoco, spécialiste en caméras vintage" />
 
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap_5-1-1.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <title>Orinophotos</title>
+  <title>OriView</title>
 </head>
 
 <body>
   <header>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <nav class="navbar navbar-dark bg-dark">
-            <ul>
-              <li>
-                <a href="pages/panier.html" id="qantityPanier" class="btn btn-primary">Panier</a>
-              </li>
-              <li>
-                <a href="index.html"  class="btn btn-primary">Accueil</a>
-              </li>
-            </ul>
-          </nav>
+    <div class="container">
+      <nav class="navbar navbar-toggler navbar-light bg-light">
+        <div class="container-fluid">
+          <img class="navbar-brand logo" src="images/logo-orinoco.png" alt="OriView" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+              <a class="nav-link" href="#">Panier</a>
+              <a class="nav-link disabled">Autres sites Orinoco</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <div class="image-bandeau">
-    <img src="images/bandeau.jpeg" alt="image-bandeau" />
-    <div class="texte-bandeau">
-      <h1>Orinophotos</h1>
-      <p>La Photo pour les pros</p>
-    </div>
-  </div>
-
   <main>
-    <section id="container">
+    <div class="container mt-5">
+      <h1>Nos appareils</h1>
+      <section id="containerListe">
 
-    </section>
+      </section>
+    </div>
   </main>
 
   <footer>
-    <ul>
-      <li><a href="#">Propos</a></li>
-      <li><a href="#">Privée</a></li>
-      <li><a href="#">Conditions d'utilisations</a></li>
-    </ul>
+    <div class="container">
+      <div class="container-fluid text-center align-bottom bg-light mt-3">
+        <ul class="footer">
+          <li><a href="#">Conditions d'utilisations</a></li>
+          <li><a href="#">Propos</a></li>
+          <li><a href="#">Privée</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
   <script src="js/index.js"></script>
