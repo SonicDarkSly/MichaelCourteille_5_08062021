@@ -5,14 +5,12 @@ body {
   background: linear-gradient(rgba(88, 74, 54, 0.74), rgba(184, 178, 165, 0.774));
 }
 
-
-
 .logo {
   max-width: 6em;
 }
 
 .photoListe {
-	max-width: 250px;
+	max-width: 270px;
 }
 
 .footer li {
