@@ -4,6 +4,7 @@ body {
   margin: 5px;
   padding: 5px;
   background: linear-gradient(rgba(88, 74, 54, 0.74), rgba(184, 178, 165, 0.774));
+  background-attachment: fixed;
 }
 
 .footer li {

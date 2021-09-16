@@ -17,7 +17,7 @@ function lecture(info) {
     let img = info.imageUrl;
 
     document.getElementById("product_name").innerText = name;
-    document.getElementById("element_photo").innerHTML = "<img src='"+img+"' alt='photo' class='img-fluid' />";
+    document.getElementById("element_photo").innerHTML = "<img src='"+img+"' alt='photo du "+name+"' class='img-fluid' />";
     document.getElementById("element_info_description").innerHTML = "<span class='description_article_titre'>Description</span> : <span class='description_article'>"+description+"</span>";
     document.getElementById("element_info_price").innerHTML = "Prix : <span>"+price+".00 €</span>";
 }
