@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="OriView, branche de l'entreprise Orinoco, spécialiste en caméras vintage" />
-
-  <script src="js/bootstrap.bundle.min.js"></script>
-
-  <link rel="stylesheet" href="css/bootstrap_5-1-1.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
-
-  <title>OriView</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="OriView, branche de l'entreprise Orinoco, spécialiste en caméras vintage" />
+  
+    <script src="js/bootstrap.bundle.min.js"></script>
+  
+    <link rel="stylesheet" href="css/bootstrap_5-1-1.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  
+    <title>OriView</title>
+  </head>
 
 <body>
   <header>
@@ -36,27 +36,35 @@
   </header>
 
   <main>
-    <div class="container mt-5">
-      <h1></h1>
-      <section id="containerProduit">
-
+    <div class="container mt-3">
+      <section class="container">
+        <h1 id="product_name" class="text-center"></h1>
+        <div id="containerFicheAppareil" class="row d-flex flex-row flex-wrap">
+          <div class="bg-light text-center rounded border border-secondary col-sm-7 m-1  justify-content-center">
+            <p id="element_photo" class="m-2"></p>
+          </div>
+          <div class="bg-light rounded border border-secondary col-sm m-1">
+            <p id="element_info_description" class="description_article"></p>
+            <p id="element_info_price" class="prix_article"></p>
+          </div>
+        </div>
       </section>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <div class="container-fluid text-center align-bottom bg-light mt-3">
+      <div class="container-fluid text-center bg-light mt-4 p-3 rounded border border-secondary">
         <ul class="footer">
           <li><a href="#">Conditions d'utilisations</a></li>
-          <li><a href="#">Propos</a></li>
+          <li><a href="#">A Propos</a></li>
           <li><a href="#">Privée</a></li>
         </ul>
       </div>
     </div>
   </footer>
 
-  <script src=""></script>
+  <script src="js/produit.js"></script>
 
 </body>
 </html>

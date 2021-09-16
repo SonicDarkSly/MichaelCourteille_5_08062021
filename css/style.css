@@ -1,16 +1,9 @@
+/* commun */
 
 body {
   margin: 5px;
   padding: 5px;
   background: linear-gradient(rgba(88, 74, 54, 0.74), rgba(184, 178, 165, 0.774));
-}
-
-.logo {
-  max-width: 6em;
-}
-
-.photoListe {
-	max-width: 270px;
 }
 
 .footer li {
@@ -23,4 +16,32 @@ body {
 	color: black;
   font-size: 16px;
   text-decoration: none;
+}
+
+/* page index liste article */
+
+.logo {
+  max-width: 6em;
+}
+
+.photoListe {
+	max-width: 270px;
+}
+
+/* page article */
+
+.prix_article {
+	font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description_article_titre {
+	font-size: 16px;
+  text-decoration: underline;
+}
+
+.description_article {
+	font-size: 16px;
+  text-decoration:  none;
 }
