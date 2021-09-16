@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -15,6 +14,7 @@
   </head>
 
 <body>
+  <!-- header avec navbar -->
   <header>
     <div class="container">
       <nav class="navbar navbar-toggler navbar-light bg-light">
@@ -35,23 +35,49 @@
     </div>
   </header>
 
+  <!-- main avec 2 parties -->
   <main>
     <div class="container mt-3">
       <section class="container">
+
+        <!-- nom article -->
         <h1 id="product_name" class="text-center"></h1>
         <div id="containerFicheAppareil" class="row d-flex flex-row flex-wrap">
-          <div class="bg-light text-center rounded border border-secondary col-sm-7 m-1  justify-content-center">
+
+          <!-- div photo -->
+          <div class="bg-light text-center rounded border border-secondary col-md m-1 justify-content-center">
             <p id="element_photo" class="m-2"></p>
           </div>
-          <div class="bg-light rounded border border-secondary col-sm m-1">
-            <p id="element_info_description" class="description_article"></p>
-            <p id="element_info_price" class="prix_article"></p>
+
+          <!-- div infos -->
+          <div class="bg-light rounded border border-secondary col-md m-1 p-3">
+            <div>
+              <h2 class='h2 text-center mb-4'>Informations</h2>
+            </div>
+            <div>
+              <h3 class='texte-bold-18-underline-article'>Description</h3>
+              <p id="element_info_description" class='description_article'></p>
+            </div>
+            <div>
+              <h3 class='texte-bold-18-underline-article'>Choix lentilles</h3>
+              <p id="element_info_lenses" class='description_article'></p>
+            </div>
+            <div>
+              <h3 class='texte-bold-18-underline-article'>Prix</h3>
+              <p id="element_info_price" class="article-prix"></p>
+            </div>
+            <div class="container justify-content-center border-top pt-3 m-0">
+              <p class="text-center">
+                <button type="button" class="btn btn_add_panier">Ajouter au panier</button>
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </div>
   </main>
 
+  <!-- footer -->
   <footer>
     <div class="container">
       <div class="container-fluid text-center bg-light mt-4 p-3 rounded border border-secondary">

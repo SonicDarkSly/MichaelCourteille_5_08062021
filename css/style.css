@@ -19,6 +19,10 @@ body {
   text-decoration: none;
 }
 
+.hidden {
+	opacity: 0;
+}
+
 /* page index liste article */
 
 .logo {
@@ -31,18 +35,26 @@ body {
 
 /* page article */
 
-.prix_article {
-	font-size: 24px;
+.article-prix {
+	font-size: 16px;
+  text-decoration:  none;
   font-weight: bold;
-  text-align: center;
 }
 
-.description_article_titre {
-	font-size: 16px;
+.texte-bold-18-underline-article {
+	font-size: 18px;
+  font-weight: bold;
   text-decoration: underline;
 }
 
 .description_article {
 	font-size: 16px;
   text-decoration:  none;
+}
+
+.btn_add_panier {
+	max-width: 200px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgba(192, 167, 133, 0.822);
 }
