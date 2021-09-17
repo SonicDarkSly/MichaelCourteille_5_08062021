@@ -25,8 +25,6 @@ function lecture(info) {
     let img = info.imageUrl;
     let articleOptions = info.lenses;
 
-
-
     // creer select avec id
     let select = document.createElement('select');      
       select.setAttribute("id", "select_option_article");
@@ -38,8 +36,7 @@ function lecture(info) {
       labelSelect.innerHTML = "label";
 
     // creer option pour le select avec boucle pour le nombre d'éléments
-    for (
-        i = 0; i < articleOptions.length; i++) {
+    for (i = 0; i < articleOptions.length; i++) {
         select.options[select.options.length] = new Option (articleOptions[i], articleOptions[i]);
     }
 
@@ -53,8 +50,6 @@ function lecture(info) {
     document.getElementById("element_photo").innerHTML = "<img src='"+img+"' alt=\"photo de le l'appareil "+name+"\" class='img-fluid' />";
     document.getElementById("element_info_description").innerHTML = description;
     document.getElementById("element_info_price").innerHTML = price+".00 €";
-
-
 
     let btnPanier = document.getElementById("AddPanier_btn");
       btnPanier.addEventListener("click", () => ajoutPaner())
@@ -89,7 +84,8 @@ function ajoutPaner() {
     let SessionStorage_name = mySessionStorage.name;
     let SessionStorage_price = mySessionStorage.price;
     let SessionStorage_img = mySessionStorage.img;
-    
+
+    // let option_lentille = document.getElementById("select_option_article").value;   // Pour envoyer option
 
     // appel le localstorage, ajoute element puis met a jour le localstorage
     let myPanier = JSON.parse(localStorage.getItem("panier"));
@@ -98,6 +94,7 @@ function ajoutPaner() {
         "name" : SessionStorage_name,
         "price" : SessionStorage_price,
         "photo" : SessionStorage_img,
+       // "lentille" : option_lentille  // Pour envoyer option
     });
 
     localStorage.setItem("panier", JSON.stringify(myPanier));
