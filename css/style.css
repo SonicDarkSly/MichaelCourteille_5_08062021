@@ -58,3 +58,14 @@ body {
   font-weight: 600;
   background-color: rgba(192, 167, 133, 0.822);
 }
+
+/* page panier */
+
+.photoArticle {
+	max-width: 140px;
+}
+
+.totalPrixPanier {
+	font-weight: 800;
+  font-size: 16px;
+}

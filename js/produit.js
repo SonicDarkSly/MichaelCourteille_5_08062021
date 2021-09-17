@@ -54,15 +54,13 @@ function lecture(info) {
     document.getElementById("element_info_description").innerHTML = description;
     document.getElementById("element_info_price").innerHTML = price+".00 €";
 
-    let btnPanierVide = document.getElementById("videPanier_btn");
-      btnPanierVide.addEventListener("click", () => effacerPaner())
+
 
     let btnPanier = document.getElementById("AddPanier_btn");
       btnPanier.addEventListener("click", () => ajoutPaner())
 
     // Création des elements item dans session.storage pour transmettre vers fonction ajoutPaner()
     let infoArticleObj = {
-        "idA" : id,
         "name" : name,
         "price" : price,
         "description" : description,
@@ -70,6 +68,7 @@ function lecture(info) {
     };
     sessionStorage.setItem(id, JSON.stringify(infoArticleObj));
 
+    // controle si un panier existe => initialisation panier
     if (localStorage.getItem("panier")) {
         console.log("Panier utilisateur existant dans le local storage");
     } else {
@@ -87,29 +86,20 @@ function ajoutPaner() {
 
     // recupere info du sessionStorage
     mySessionStorage = JSON.parse(sessionStorage.getItem(id));
-    let SessionStorage_id = mySessionStorage.idA;
     let SessionStorage_name = mySessionStorage.name;
     let SessionStorage_price = mySessionStorage.price;
-    let SessionStorage_description = mySessionStorage.description;
     let SessionStorage_img = mySessionStorage.img;
     
 
+    // appel le localstorage, ajoute element puis met a jour le localstorage
     let myPanier = JSON.parse(localStorage.getItem("panier"));
-    let quantityElemt = myPanier.length+1;
-    
+
     myPanier.push({
-        "idA" : SessionStorage_id,
         "name" : SessionStorage_name,
         "price" : SessionStorage_price,
-        "quantity" : quantityElemt
+        "photo" : SessionStorage_img,
     });
 
     localStorage.setItem("panier", JSON.stringify(myPanier));
-
-}
-
-function effacerPaner() {
-
-    sessionStorage.clear();
-    localStorage.clear();
+    alert("Appareil "+SessionStorage_name+" ajouté au panier avec succes");
 }
