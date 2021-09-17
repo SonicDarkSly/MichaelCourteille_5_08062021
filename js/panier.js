@@ -1,3 +1,5 @@
+// Controle si un localStorage existe
+
 if (localStorage.getItem("panier")) {
 
     let elmtStorage = JSON.parse(localStorage.getItem("panier"));

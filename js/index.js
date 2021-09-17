@@ -4,19 +4,23 @@ fetch("http://127.0.0.1:3000/api/cameras")
     .then(response => response.json())  
     .then(response => lecture(response))
 
-    //.then(response2 => console.table(response2)) //affiche tableau dans console
-    
-    //SI PROBLEME API
     .catch(function (err) {
         console.log("fetch Error")
     });
 
+// fonction d'affichage des infos sur la page
 
 function lecture(info) {
 
+  // creation elements html dans div cible (container)
+
   let container = document.getElementById("containerListe");
 
+  // boucle pour cibler tous les elements de la base de données
+
   for (i = 0; i <= info.length; i++) {
+
+    // creation elements html pour chaque element
 
     let article = document.createElement('article');
       article.setAttribute("id", info[i]._id);
@@ -41,6 +45,8 @@ function lecture(info) {
       a.setAttribute("href", "produit.html?id="+info[i]._id); 
       a.textContent = "En savoir plus";
 
+    // affiche le html
+
     container.appendChild(article)
     article.appendChild(img) 
     article.appendChild(div)
@@ -50,6 +56,5 @@ function lecture(info) {
     p_link.appendChild(a)
     
   }
-  
 }
 
