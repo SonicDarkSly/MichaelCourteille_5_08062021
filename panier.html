@@ -35,17 +35,17 @@
     </div>
   </header>
 
-  <!-- main avec 2 parties -->
+  <!-- main avec tableau panier -->
   <main>
     <div class="container mt-3">
       <section class="container">
-        <h1 class="text-center">Panier</h1>
-        <div id="containerPanier" class="row d-flex flex-row flex-wrap">
-          <div class="bg-light text-center rounded border border-secondary m-1 justify-content-center table-responsive-md">
+        <h1 class="text-center ">Panier</h1>
+        <div id="containerPanier" class="row d-flex flex-row flex-wrap justify-content-center">
+          <div class="bg-light text-center rounded border border-secondary m-1 table-responsive-md">
 
             <!-- entete tableau -->
 
-            <table class="table">
+            <table class="table table-hover table-light">
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">#</th>
@@ -60,6 +60,47 @@
 
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- affichage du formulaire-->
+
+    <div id="containerCommande" class="container mt-3 containerCommande">
+      <section class="container">
+        <h1 class="text-center">Commande</h1>
+        <div class="row d-flex flex-row flex-wrap justify-content-center">
+          <div class="bg-light rounded border border-secondary p-3  justify-content-center">
+            <div class="container formCommande">
+            <form method="post" name="formConfimation" id="form_1">
+              <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" class="form-control" required autofocus/>
+              </div>
+              <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="adresse">Adresse :</label>
+                <input type="text" id="adresse" name="adresse" class="form-control" required/>
+              </div>
+              <div class="form-group">
+                <label for="ville">Ville :</label>
+                <input type="text" id="ville" name="ville" class="form-control" required/>
+              </div>
+              <div class="form-group mt-3 align-middle text-center">
+                <button id="btnCommande" type="submit" name="btnCommande" class="btn btn-dark btn-lg m-3">
+                  Valider et commander
+                </button>
+              </div>
+            </form>
+            </div>
           </div>
         </div>
       </section>

@@ -59,21 +59,46 @@ if (localStorage.getItem("panier")) {
    } 
 
    // affiche prix total / panier vide  dans html
+   // creer button commande si le panier n'est pas vide
 
    let rowTotal = document.createElement('tr');
    let cellTotal= document.createElement('td');
      cellTotal.setAttribute("class", "totalPrixPanier");
      cellTotal.setAttribute("colspan", "4");
 
-   if (totalPrice) {
-         cellTotal.textContent = "Total du panier : "+totalPrice+".00 €";
-    }else{
-          cellTotal.textContent = "Panier vide";
-    }
+    let rowCommande = document.createElement('tr');
+    let cellCommande= document.createElement('td');
+      cellCommande.setAttribute("colspan", "4");
+ 
+    let btnCommande= document.createElement('button');
+      btnCommande.textContent = "Commander";
+      btnCommande.setAttribute("class", "btn btn-dark btn-lg m-3");
+      btnCommande.addEventListener("click", () => afficheForm("containerCommande"))
 
+    if (totalPrice) {
+       cellTotal.textContent = "Total du panier : "+totalPrice+".00 €";
+     }else{
+       cellTotal.textContent = "Panier vide";
+       rowCommande.setAttribute("style", "display:none;");
+    }
     table.appendChild(rowTotal)
     rowTotal.appendChild(cellTotal)
-
+    table.appendChild(rowCommande)
+    rowCommande.appendChild(cellCommande)
+    cellCommande.appendChild(btnCommande)
 }else{
     alert("localStorage error\n--------------\nPanier inexistant");
 }
+
+// affiche le formulaire au clic sur le button //
+
+function afficheForm(container) {
+  let contCommande = document.getElementById(container)
+
+  if ((contCommande.style.display != 'block')) { 
+    contCommande.style.display = 'block';
+  } else { 
+    contCommande.style.display = 'none'; 
+  }  
+}
+
