@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="OriView, branche de l'entreprise Orinoco, spécialiste en caméras vintage" />
+  
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap_5-1-1.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  
+    <title>OriView</title>
+  </head>
+
+<body>
+  <!-- header avec navbar -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-toggler navbar-light bg-light">
+        <div class="container-fluid">
+          <img class="navbar-brand logo" src="images/logo-orinoco.png" alt="OriView" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+              <a class="nav-link" href="panier.html">Panier</a>
+              <a class="nav-link disabled">Autres sites Orinoco</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- main avec tableau panier -->
+  <main>
+    <div class="container mt-3">
+      <section class="container">
+        <h1 class="text-center ">Confirmation de votre commande</h1>
+        <div id="containerPanier" class="row d-flex flex-row flex-wrap justify-content-center">
+          <div class="bg-light text-center rounded border border-secondary m-1 table-responsive-md">
+            <h2>Félicitations <span id="prenom"></span>&nbsp;<span id="nom"></span>&nbsp;!</h2>
+            <p class="textConfirm">
+              Nous vous remercions pour votre commande d'un montant total à payer de&nbsp;<span id="commandePrix"></span>.00 €.<br />
+              Vous allez pouvoir dans quelques jours réceptionner votre commande.<br />Merci de bien vouloir conserver votre référence de commande ci-dessous pour toute communication avec notre équipe commerciale :
+            </p>
+            <p id="commandeId"></p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer>
+    <div class="container">
+      <div class="container-fluid text-center bg-light mt-4 p-3 rounded border border-secondary">
+        <ul class="footer">
+          <li><a href="#">Conditions d'utilisations</a></li>
+          <li><a href="#">A Propos</a></li>
+          <li><a href="#">Privée</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- appel script js frontend-->
+  <script src="js/commande.js"></script>
+</body>
+</html>

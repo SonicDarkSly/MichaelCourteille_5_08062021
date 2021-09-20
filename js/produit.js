@@ -91,9 +91,10 @@ function ajoutPaner() {
     let myPanier = JSON.parse(localStorage.getItem("panier"));
 
     myPanier.push({
+        "id" : id,
         "name" : SessionStorage_name,
         "price" : SessionStorage_price,
-        "photo" : SessionStorage_img,
+        "photo" : SessionStorage_img
        // "lentille" : option_lentille  // Pour envoyer option
     });
 
