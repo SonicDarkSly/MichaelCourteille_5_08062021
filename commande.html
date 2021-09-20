@@ -35,28 +35,67 @@
     </div>
   </header>
 
-  <!-- main avec tableau panier -->
+  <!-- main -->
   <main>
     <div class="container mt-3">
       <section class="container">
-        <h1 class="text-center ">Confirmation de votre commande</h1>
-        <div id="containerCommande class="row d-flex flex-row flex-wrap justify-content-center">
-          <div class="bg-light text-center rounded border border-secondary m-1 table-responsive-md">
-            <h2>Félicitations <span id="prenom"></span>&nbsp;<span id="nom"></span>&nbsp;!</h2>
-            <p class="textConfirm">
-              Nous vous remercions pour votre commande d'un montant total à payer de&nbsp;<span id="commandePrix"></span>.
+        <div id="containerCommandeTop" class="row d-flex flex-row flex-wrap justify-content-center">
+        <h1 class="text-center">Confirmation de votre commande</h1>
+          <div class="bg-light text-center rounded border border-secondary">
+            <h2>Félicitations</h2>
+            <p>
+              Nous vous remercions pour votre commande.
               <br />
               Vous allez pouvoir dans quelques jours réceptionner votre commande.
               <br />
-              Merci de bien vouloir conserver votre référence de commande ci-dessous pour toute communication avec notre équipe commerciale :
+              Merci de bien vouloir conserver votre référence de commande ci-dessous pour toute communication ultérieure.
             </p>
-            <p id="commandeId"></p>
             <p><a href="index.html">Retour à la page d'accueil</a></p>
           </div>
         </div>
       </section>
     </div>
+  
+    <!-- 2 parties -->
+
+    <div class="container mt-3">
+      <section class="container">
+        <div id="containerCommandeMiddle" class="row d-flex flex-row flex-wrap justify-content-center">
+
+          <!-- div Informations commande -->
+          <div class="bg-light rounded border border-secondary col-md m-1">
+            <h2 class='h2 text-center mb-4'>Informations commande</h2>
+            <p><span class="sectionConfirmCommandeTitre">Montant total : </span><span id="commandePrix"></span></p>
+            <p><span class="sectionConfirmCommandeTitre">Rérérence : </span><span id="commandeId"></span></p>
+          </div>
+  
+          <!-- div Informations livraison -->
+          <div class="bg-light rounded border border-secondary col-md m-1">
+            <div>
+              <h2 class='h2 text-center'>Informations livraison</h2>
+            </div>
+            <div>
+              <p>
+                <span class="sectionConfirmCommandeTitre">Identitée : </span><span id="prenom"></span>&nbsp;<span id="nom"></span>
+              </p>
+              <p>
+                <span class="sectionConfirmCommandeTitre">Adresse : </span><span id="adresse"></span>
+              </p>
+            </div>
+            <div>
+              <h3 class='h3 text-center'>Informations Divers</h3>
+            </div>
+            <div>
+              <p>
+                <span class="sectionConfirmCommandeTitre">Contact : </span><span id="contact"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
+
 
   <!-- footer -->
   <footer>

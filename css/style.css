@@ -79,3 +79,9 @@ body {
 .formCommande {
 	max-width: 400px;
 }
+
+/* page commande */
+
+.sectionConfirmCommandeTitre {
+	font-weight: 700;
+}
