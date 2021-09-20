@@ -2,6 +2,8 @@
 
 confirmationCommande = () => {
     if (sessionStorage.getItem("order") != null) {
+      console.log("sessionStorage [order] valide");
+
       let order = JSON.parse(sessionStorage.getItem("order"));
 
       // retour backend
@@ -32,6 +34,9 @@ confirmationCommande = () => {
       document.getElementById("commandeId").innerHTML = refCommande;
 
       sessionStorage.clear();
+
+      console.log("elements html insérés");
+      console.log("sessionStorage supprimer");
     }  
   };
   

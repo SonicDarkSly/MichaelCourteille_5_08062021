@@ -4,8 +4,8 @@ fetch("http://127.0.0.1:3000/api/cameras")
     .then(response => response.json())  
     .then(response => lecture(response))
 
-    .catch(function (err) {
-        console.log("fetch Error")
+    .catch(function(err) {
+      console.log('Il y a eu un problème avec l\'opération fetch: '+err);
     });
 
 // fonction d'affichage des infos sur la page
@@ -23,10 +23,9 @@ function lecture(info) {
     // creation elements html pour chaque element
 
     let article = document.createElement('article');
-      article.setAttribute("id", info[i]._id);
       article.setAttribute("class", "bg-white text-center p-2 m-2 rounded border border-secondary");
 
-    let img = document.createElement('img');
+      let img = document.createElement('img');
       img.setAttribute("src", info[i].imageUrl);
       img.setAttribute("class", "img-fluid photoListe"); 
       img.setAttribute("alt", "photo de l'appareil "+info[i].name); 

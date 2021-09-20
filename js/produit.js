@@ -62,15 +62,17 @@ function lecture(info) {
         "img" : img
     };
     sessionStorage.setItem(id, JSON.stringify(infoArticleObj));
+    console.log("SessionStorage ["+id+"] creer avec succes");
 
     // controle si un panier existe => initialisation panier
     if (localStorage.getItem("panier")) {
         console.log("Panier utilisateur existant dans le local storage");
     } else {
-        console.log("Création d'un panier utilisateur dans le local storage");
+        console.log("Aucun panier utilisateur dans le local storage");
         //Le panier est un tableau de produits
         let panierinit = [];
         localStorage.setItem("panier", JSON.stringify(panierinit));
+        console.log("Panier utilisateur creer dans le local storage avec succes");
     };
 }
 
@@ -99,5 +101,10 @@ function ajoutPaner() {
     });
 
     localStorage.setItem("panier", JSON.stringify(myPanier));
+
+    console.log("localStorage [panier] mis à jour avec succes");
+    
     alert("Appareil "+SessionStorage_name+" ajouté au panier avec succes");
+
+    console.log("Appareil "+SessionStorage_name+" ajouté au panier avec succes");
 }

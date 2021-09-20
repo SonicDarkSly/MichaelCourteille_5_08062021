@@ -6,10 +6,11 @@ let elmtStorage = JSON.parse(localStorage.getItem("panier"));
 // controle si localStorage existe sinon creer le localStorage
 
 if (localStorage.getItem("panier")) {
-  console.log(elmtStorage);
+  console.log("localStorage [panier] existant");
 } else {
   let createCart = [];
   localStorage.setItem("panier", JSON.stringify(createCart));
+  console.log("localStorage [panier] creer avec succes");
 }
 
 
@@ -67,6 +68,7 @@ for (let i = 0; i < elmtStorage.length; i++) {
     elmtStorage.splice(i, 1);
     localStorage.clear();
     localStorage.setItem("panier", JSON.stringify(elmtStorage));
+    console.log("localStorage [panier] index ["+i+"] suuprimer avec succes ");
     window.location.reload();
   }; 
 } 
@@ -151,8 +153,10 @@ function checkForm() {
     ) {
       inputLastName.style.backgroundColor = "#FF7878";
       suiviCheckForm = "error";
+      console.log("erreur champs inputLastName");
   } else {
       inputLastName.style.backgroundColor = "#8CFF87";
+      console.log("champs inputLastName ok");
   }
 
   // Test du prenom
@@ -164,6 +168,7 @@ function checkForm() {
       ) {
         inputFirstName.style.backgroundColor = "#FF7878";
         suiviCheckForm = "error";
+        console.log("erreur champs inputFirstName");
   } else {
         inputFirstName.style.backgroundColor = "#8CFF87";
   }
@@ -176,6 +181,7 @@ function checkForm() {
     ) {
       inputEmail.style.backgroundColor = "#FF7878";
       suiviCheckForm = "error";
+      console.log("erreur champs inputEmail");
   } else {
     inputEmail.style.backgroundColor = "#8CFF87";
   }
@@ -188,6 +194,7 @@ function checkForm() {
       ) {
         inputAdress.style.backgroundColor = "#FF7878";
         suiviCheckForm = "error";
+        console.log("erreur champs inputAdress");
   } else {
     inputAdress.style.backgroundColor = "#8CFF87";
   }
@@ -201,12 +208,14 @@ function checkForm() {
       ) {
         inputCity.style.backgroundColor = "#FF7878";
         suiviCheckForm = "error";
+        console.log("erreur champs inputCity");
   } else {
     inputCity.style.backgroundColor = "#8CFF87";
   }
 
   if (suiviCheckForm == "error") {
     alert("Attention certaines données ne peuvent être validées");
+    console.log("Attention certaines données ne peuvent être validées");
   }
   // Si le formulaire est validé
   else {
@@ -220,17 +229,21 @@ function checkForm() {
       email: inputEmail.value
     };
 
+    console.log("objet contact creer avec succes"); 
+
     // creation tableau avec les id des articles du panier
     let products = [];
     elmtStorage.forEach((articlePanier) => {
       products.push(articlePanier.id);
     });
+    console.log("tableau products mis à jour avec succes"); 
 
     // creation objet à envoyer (contact formulaire + tableau id)
     let commandeOrder = {
       contact,
       products
     };
+    console.log("objet contact + products creer avec succes"); 
 
     // declaration des element à envoyer puis envoi
 
@@ -238,6 +251,9 @@ function checkForm() {
     let postForm = JSON.stringify(commandeOrder);
     sendRequest (postForm, url);
     localStorage.clear();
+
+    console.log("envois vers fonction sendRequest ok"); 
+    console.log("localStorage supprimer"); 
   }
 }
 
@@ -250,7 +266,7 @@ function sendRequest(data, url) {
       sessionStorage.setItem("order", this.response);
       window.location = "./commande.html";
     } else {
-      console.log("defaut");
+      console.log("defaut ETAT XMLHttpRequest : "+this.readyState);
     }
   };
 
