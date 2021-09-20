@@ -19,7 +19,7 @@ confirmationCommande = () => {
 
       // retour backend, info id commande
 
-      document.getElementById("commandePrix").innerHTML = priceOrder;
+      document.getElementById("commandePrix").innerHTML = priceOrder+".00 €";
       document.getElementById("commandeId").innerHTML = order.orderId;
 
       sessionStorage.clear();

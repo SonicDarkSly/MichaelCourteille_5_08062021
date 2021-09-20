@@ -247,10 +247,8 @@ function sendRequest(data, url) {
   let request = new XMLHttpRequest();
   request.onload = function () {
     if (this.readyState == XMLHttpRequest.DONE && this.status == 201) {
-      let response = JSON.parse(this.responseText);
       sessionStorage.setItem("order", this.response);
       window.location = "./commande.html";
-      console.log(response);
     } else {
       console.log("defaut");
     }
