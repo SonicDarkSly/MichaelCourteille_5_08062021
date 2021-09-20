@@ -1,8 +1,17 @@
+let sessionOrder = sessionStorage.getItem("order");
+
+// Controle si sessionStorage existe sinon redirect sur index.html
+
+if (sessionOrder != null) {
+  console.log("sessionStorage [order] valide");
+  confirmationCommande();
+}else{
+  document.location.href="index.html"; 
+}
+
 // Récupération des informations pour affichage sur la page de commande 
 
-confirmationCommande = () => {
-    if (sessionStorage.getItem("order") != null) {
-      console.log("sessionStorage [order] valide");
+function confirmationCommande () {
 
       let order = JSON.parse(sessionStorage.getItem("order"));
 
@@ -37,8 +46,5 @@ confirmationCommande = () => {
 
       console.log("elements html insérés");
       console.log("sessionStorage supprimer");
-    }  
-  };
-  
-  confirmationCommande();
-  
+
+};
