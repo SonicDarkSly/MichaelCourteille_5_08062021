@@ -115,6 +115,8 @@ document.getElementById("btnCommandeValidate").addEventListener("click", () => c
 
 } 
 
+// appel fonction displayPanier() (affichage panier)
+
 displayPanier();
 
 // fonction pour afficher le formulaire au clic sur le button 
