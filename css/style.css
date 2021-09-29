@@ -7,6 +7,10 @@ body {
   background-attachment: fixed;
 }
 
+.logo {
+  max-width: 5.5em;
+}
+
 .footer li {
 	display: inline;
 	list-style: none; 
@@ -25,9 +29,6 @@ body {
 
 /* page index liste article */
 
-.logo {
-  max-width: 6em;
-}
 
 .photoListe {
 	max-width: 270px;

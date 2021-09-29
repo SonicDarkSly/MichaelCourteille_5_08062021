@@ -14,6 +14,8 @@ if (localStorage.getItem("panier")) {
 }
 
 
+function displayPanier() {
+
 // table dams le quel sera insérer le html
 
 let table = document.getElementById("tab_panier")
@@ -110,6 +112,10 @@ cellCommande.appendChild(btnCommande)
 // ecoute le button de validation du formulaire
 
 document.getElementById("btnCommandeValidate").addEventListener("click", () => checkForm())
+
+} 
+
+displayPanier();
 
 // fonction pour afficher le formulaire au clic sur le button 
 
