@@ -1,8 +1,3 @@
-
-// appel localStorage
-
-let elmtStorage = JSON.parse(localStorage.getItem("panier"));
-
 // controle si localStorage existe sinon creer le localStorage
 
 if (localStorage.getItem("panier")) {
@@ -13,6 +8,9 @@ if (localStorage.getItem("panier")) {
   console.log("localStorage [panier] creer avec succes");
 }
 
+// appel localStorage
+
+let elmtStorage = JSON.parse(localStorage.getItem("panier"));
 
 function displayPanier() {
 
